@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UtF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dpcument</title>
+  <link rel="stylesheet" type="text/css" href=style.css>
+</head>
+
+<body class="Page">
+
+<nav>
+  <ul>
+    <li class="left"><a href ="Index.html">Home</a></li>
+    <li class="left"><a href ="InteractiveResume.html">Interactive Resume</a></li>
+    <li class="left"><a href ="AboutMe.html" >About Me</a></li>
+    <li class="left"><a href ="RecentWork.html" class="nav-active">Projects</a></li>
+    <li class="right"><a href="https://www.linkedin.com/in/jackfriedberg" target="_blank">LinkedIn</a></li></a>
+    <li class="right"><a href="https://www.github.com" target="_blank">GitHub</a></li></a>
+  </ul>
+</nav>
+<div class="Resume-Section" style="border-top:none; border-bottom:white 5px solid">
+  <h3 class="Section-Title"> Course Work and Projects </h3>
+    <button class="Line-Header"> Matlab Projects </button>
+      <div class="panel">
+        <p class="Resume-Details"> GitHub Links </p>
+      </div>
+    <button class="Line-Header">Labview Projects</button>
+      <div class="panel">
+        <p class="Resume-Details"> Github Links </p>
+      </div>
+</div>
+<div class="Resume-Section" style="border-top:none; border-bottom:white 5px solid">
+  <h3 class="Section-Title"> Extra-Curricular Work and Projects </h3>
+    <button class="Line-Header"> Biomedical Engineering Lab Internship</button>
+      <div class="panel">
+        <p class="Resume-Details">Details, details....</p>
+      </div>
+    <button class="Line-Header"> Seeking Alpha Collegiate Competition</button>
+      <div class="panel">
+        <p class="Resume-Details"> Details </p>
+      </div>
+</div>
+<div class="Resume-Section" style="border-top:none; border-bottom:white 5px solid">
+  <h3 class="Section-Title"> Personal Work and Projects</h3>
+    <button class="Line-Header"> Seeking Alpha Articles</button>
+      <div class="panel">
+        <p class="Resume-Details">Links</p>
+      </div>
+    <button class="Line-Header"> This Website!</button>
+      <div class="panel">
+        <p class="Resume-Details"> Process</p>
+      </div>
+</div>
+
+</body>
+<script>
+var acc = document.getElementsByClassName("Line-Header");
+var i;
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+    }
+}
+</script>
+
+
+</html>
