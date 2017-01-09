@@ -11,10 +11,10 @@
 /* BACKGROUND SETTINGS */
 /*Home Page background settings */
 body.Home{
-  background:url(background6.jpg) repeat-y;
+  background:url(Background.jpg) repeat-y;
 }
 body.Page { /* Other Page background settings */
-  background:url(background6.jpg) repeat-y;
+  background:url(Background.jpg) repeat-y;
 }
 /* END BACKGROUND SETTINGS */
 
@@ -199,7 +199,14 @@ li a:hover {
 .Project-Header{
   color: white;
 }
-/* END recent work settings */
+img.SA-Preview-Pic{
+  display: block;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 7.5px;
+}
+/* END RECENT WORK SETTINGS */
 
 
 
@@ -240,6 +247,7 @@ div.panel {
   padding: 2px 18px;
   background-color: rgba(255, 255, 255, .3);
   display: none;
+  height: auto;
 }
 div.panel.show {
   display: block;
@@ -406,14 +414,14 @@ span.Right{
     margin: 0;
   }
   p.Line-subHeader:before {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    content: '\02795'; /* Unicode for "plus" sign (+) */
     color: white;
     float:left;
     margin-right: 5px;
     visibility: hidden;
   }
   p.Line-subHeader.active:before {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    content: "\2796"; /* Unicode for "minus" sign (-) */
     visibility: hidden;
   }
   .Resume-Details{
@@ -444,13 +452,13 @@ span.Right{
     text-align: center;
   }
   button.Line-Header:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    content: '\02795'; /* Unicode for "plus" sign (+) */
     color: white;
     float:none;
     margin-right: 5px;
   }
   button.Line-Header.active:after{
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    content: "\2796"; /* Unicode for "minus" sign (-) */
   }
   .Line-Header-Inactive {
     background:none;
@@ -482,7 +490,7 @@ span.Right{
   .Course-Subject{
     color: white;
     border-bottom: white 1px solid;
-    text-align: center;
+    text-align: left;
   }
 }
 /* End Viewport Specific Formatting */
