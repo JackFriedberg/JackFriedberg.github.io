@@ -1,33 +1,23 @@
 /* Style Sheet for JackFriedberg.com */
 
 /* GENERAL SETTINGS */
-*:focus {
-    outline: none;
-}
+*:focus { outline: none; }
+@font-face { font-family: Merriweather; src: url('Fonts/merriweather/Merriweather-Regular.ttf'); }
+@font-face { font-family: Raleway; src: url('Fonts/raleway/Raleway-Regular.ttf'); }
 /* END GENERAL SETTINGS */
 
 
 
 /* BACKGROUND SETTINGS */
-/*Home Page background settings */
-body.Home{
-  background:url(Background.jpg) repeat-y;
-}
-body.Page { /* Other Page background settings */
-  background:url(Background.jpg) repeat-y;
-}
+body{ background:url(Background.jpg) repeat-y; }
 /* END BACKGROUND SETTINGS */
 
 
 
 /* NAV BAR SETTINGS */
 @media only screen and (min-width: 700px){
-  li.left {
-    float: left;
-  }
-  li.right {
-    float: right;
-  }
+  li.left { float: left; }
+  li.right { float: right; }
   ul {
     list-style-type: none;
     margin-bottom: : 0;
@@ -40,17 +30,15 @@ body.Page { /* Other Page background settings */
   }
 }
 @media only screen and (max-width: 699.999px){
-li {
-  float: none;
-}
-ul {
-  list-style-type: none;
-  margin: 0px;
-  clear:both;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
+  li { float: none; }
+  ul {
+    list-style-type: none;
+    margin: 0px;
+    clear:both;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
 }
 li a{
   display: block;
@@ -58,18 +46,15 @@ li a{
   text-align: center;
   padding: 15px 15px;
   text-decoration: none;
-  font-family:"Times New Roman";
+  font-family: Merriweather;
 }
 li a:hover {
   text-decoration: none;
   background-color:#8B8C8C;
-  color:white;
 }
 .nav-active {
   text-decoration: none;
   background-color:rgba(136, 136, 136, .5);
-  color:white;
-  font-family: "Times New Roman"
 }
 /* END NAV BAR SETTINGS */
 
@@ -110,7 +95,7 @@ li a:hover {
     display: none;
   }
   .menu-title{
-    font-size: calc(35px + 2.8vw);
+    font-size: calc(35px + 2.8vw)
   }
   .menu-sub{
     font-size: calc(17.5px + 1.4vw);
@@ -133,14 +118,13 @@ li a:hover {
   }
 }
 .menu-title{
-  font-family: "Courier New";
-  font-weight: lighter;
+  font-family: Raleway;
   padding: 0;
   margin: 0;
   color: white;
 }
 .menu-sub{
-  font-family: "Courier New";
+  font-family: Meriweather;
   padding: 0;
   margin: 0;
   color: white;
@@ -150,34 +134,53 @@ li a:hover {
 
 
 /* ABOUT ME SETTINGS */
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 699.999px){
   img.headshot{
-    max-width: 25%;
+    width: 200px;
     display: block;
-    margin: auto;
-    padding:7.5px;
+    margin-left:auto;
+    margin-right: auto;
+    padding-top: 7.5px;
+    padding-bottom:7.5px;
   }
   .about-me-text{
-    margin-left: 0;
-    margin-top: 0;
-    padding: 10px 15px;
+    margin: 5px;
+    padding: 0;
     color: white;
+    text-align: justify;
+    text-indent: 40px;
+    font-size: 15px;
+    font-family: Merriweather;
   }
 }
-@media only screen and (min-width: 699.999px){
+@media only screen and (min-width: 700px) and (max-width: 1199.999px){
   img.headshot{
     float: left;
-    max-width: 17%;
-    margin:0;
+    width: calc(150px + 1.7vw);
     padding-right: 7.5px;
   }
   .about-me-text{
-    margin-left: 7.5px;
-    margin-top: 0;
-    padding: 10px 15px;
-    clear: both;
+    margin: 5px;
     text-align: justify;
+    text-indent: 40px;
     color: white;
+    font-size: calc(12px + .7vw);
+    font-family: Merriweather;
+  }
+}
+@media only screen and (min-width: 1200px){
+  img.headshot{
+    float: left;
+    width: 170px;
+    padding-right: 7.5px;
+  }
+  .about-me-text{
+    margin: 5px;
+    text-align: justify;
+    text-indent: 40px;
+    color: white;
+    font-size: 20px;
+    font-family: Merriweather;
   }
 }
 /* END ABOUT ME SETTINGS */
@@ -185,26 +188,21 @@ li a:hover {
 
 
 /* Recent Work Settings */
-.Projects{
-    padding: 10px 15px;
-    margin-top: 7.5px;
-    float: left;
-    border: 5px white solid;
-    width: 99%;
-}
-.All-Projects{
-  width: 99%;
-  display: inline-block;
-}
-.Project-Header{
-  color: white;
-}
 img.SA-Preview-Pic{
   display: block;
   height: 100px;
   margin-left: auto;
   margin-right: auto;
   padding-right: 7.5px;
+}
+div.work-panel {
+  padding: 2px 18px;
+  background-color: rgba(255, 255, 255, .3);
+  display: none;
+  overflow: auto;
+}
+div.work-panel.show {
+  display: block;
 }
 /* END RECENT WORK SETTINGS */
 
@@ -232,10 +230,12 @@ img.SA-Preview-Pic{
 .Resume-Page-Title{
   text-align: center;
   color: white;
+  font-family: Raleway;
 }
 .Resume-Page-subTitle{
   text-align: center;
   color: white;
+  font-family: Raleway;
 }
 .Resume-Section{
   border-top: 5px white solid;
@@ -243,13 +243,13 @@ img.SA-Preview-Pic{
 button.Line-Header.active, button.Line-Header:hover {
   background-color: rgba(255, 255, 255, .3);
 }
-div.panel {
+div.resume-panel {
   padding: 2px 18px;
   background-color: rgba(255, 255, 255, .3);
   display: none;
-  height: auto;
+  overflow: auto;
 }
-div.panel.show {
+div.resume-panel.show {
   display: block;
 }
 span.Right{
@@ -370,6 +370,7 @@ span.Right{
   .Section-Title{
     text-align: center;
     color: white;
+    font-family: Raleway;
   }
   .Line-Header {
     background:none;
@@ -382,13 +383,15 @@ span.Right{
     text-decoration: none;
     margin-top: 5px;
     margin-bottom: 3px;
-    cursor: pointer
+    cursor: pointer;
+    font-family: Merriweather;
   }
   button.Line-Header:before {
     content: '\02795'; /* Unicode character for "plus" sign (+) */
     color: white;
     float:left;
     margin-right: 5px;
+    font-family: Merriweather;
   }
   button.Line-Header.active:before {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
@@ -404,21 +407,26 @@ span.Right{
     text-decoration: none;
     margin-top: 5px;
     margin-bottom: 3px;
+    font-family: Merriweather;
   }
   .Line-subHeader{
     padding: 0px;
     margin: 0;
+    font-family: Merriweather;
   }
   .Line-subHeader-Inactive{
     padding: 0px;
     margin: 0;
+    font-family: Merriweather;
   }
   p.Line-subHeader:before {
     content: '\02795'; /* Unicode for "plus" sign (+) */
     color: white;
     float:left;
+    clear: left;
     margin-right: 5px;
     visibility: hidden;
+    font-family: Merriweather;
   }
   p.Line-subHeader.active:before {
     content: "\2796"; /* Unicode for "minus" sign (-) */
@@ -426,16 +434,19 @@ span.Right{
   }
   .Resume-Details{
     color: white;
+    font-family: Merriweather;
   }
   .Course-Subject{
     color: white;
     border-bottom: white 1px solid;
+    font-family: Merriweather;
   }
 }
 @media only screen and (max-width: 699.999px){
   .Section-Title{
     text-align: center;
     color: white;
+    font-family: Raleway;
   }
   .Line-Header {
     background:none;
@@ -450,12 +461,14 @@ span.Right{
     margin-bottom: 3px;
     cursor: pointer;
     text-align: center;
+    font-family: Merriweather;
   }
   button.Line-Header:after {
     content: '\02795'; /* Unicode for "plus" sign (+) */
     color: white;
     float:none;
     margin-right: 5px;
+    font-family: Merriweather;
   }
   button.Line-Header.active:after{
     content: "\2796"; /* Unicode for "minus" sign (-) */
@@ -472,25 +485,30 @@ span.Right{
     margin-top: 5px;
     margin-bottom: 3px;
     text-align: center;
+    font-family: Merriweather;
   }
   .Line-subHeader{
     padding: 0px;
     margin: 0;
     text-align: center;
+    font-family: Merriweather;
   }
   .Line-subHeader-Inactive{
     padding: 0px;
     margin: 0;
     text-align: center;
+    font-family: Merriweather;
   }
   .Resume-Details{
     color: white;
     text-align: left;
+    font-family: Merriweather;
   }
   .Course-Subject{
     color: white;
     border-bottom: white 1px solid;
     text-align: left;
+    font-family: Merriweather;
   }
 }
 /* End Viewport Specific Formatting */
