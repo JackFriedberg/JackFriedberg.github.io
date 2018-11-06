@@ -1,1 +1,0 @@
-# JackFriedberg.github.io
